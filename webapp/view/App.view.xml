@@ -27,7 +27,7 @@
  -->
 
 <!-- JSON Model 추가 -->
-  <mvc:View
+  <!-- <mvc:View
     controllerName="ui5.walkthrough.controller.App"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc">
@@ -40,10 +40,27 @@
         description="Hello {/recipient/name}"
         valueLiveUpdate="true"          
         width="60%"/>
-</mvc:View>
+</mvc:View> -->
 
 <!-- 
     1. value : 데이터 주소
     2. description : 표시 데이터
     3. valueLiveUpdate : 즉시 데이터 반영
 -->
+
+<!-- 번역시스템 -->
+ <mvc:View
+    controllerName="ui5.walkthrough.controller.App"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    
+    <Button 
+    text="{i18n>showHelloButtonText}"
+    press=".onShowHello"/>
+
+    <Input 
+        value="{/recipient/name}"
+        description="Hello {/recipient/name}"
+        valueLiveUpdate="true"          
+        width="60%"/>
+</mvc:View>

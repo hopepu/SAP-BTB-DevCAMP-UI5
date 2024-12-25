@@ -2,5 +2,15 @@
     "_version": "1.58.0",
     "sap.app": {
       "id": "ui5.walkthrough"
+    },
+    "sap.ui5": {
+      "models": {
+        "i18n": {          
+          "type": "sap.ui.model.resource.ResourceModel",
+          "uri": "i18n/i18n.properties",
+          "async": true
+        }
+      }
     }
 }
+

@@ -17,7 +17,7 @@ sap.ui.define([
     "sap/ui/core/mvc/XMLView"
     // XMLnamespace : sap.ui.core.mvc 사용
 ], (XMLView) => {
-    "use restrict";
+    "use strict";
     XMLView.create({
         viewName: "ui5.walkthrough.view.App"
     }).then((oView) => oView.placeAt("content"));
