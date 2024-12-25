@@ -1,0 +1,12 @@
+<mvc:View
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Text text="Hello World"/>
+</mvc:View>
+
+<!-- 
+    1. 뷰 이름은 대문자로 시작
+    2. 모든 뷰는 view 폴더에 저장
+    3. xmlns 네임스페이스는 sap.m
+    4. 뷰 이름은 *.view.xml 로 끝
+ -->
