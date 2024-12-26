@@ -41,10 +41,42 @@
 // })
 
 //step10 Descriptor for Applications
+// sap.ui.define([
+//     "sap/ui/core/UIComponent",
+//     "sap/ui/model/json/JSONModel"
+// ], (UIComponent, JSONModel) => {
+//     "use strict";
+
+//     return UIComponent.extend("ui5.walkthrough.Component", {
+//         metadata : {
+//             interface:["sap.ui.core.IAsyncContentCreation"],
+//             manifest:"json"
+//         },
+
+//         init(){
+//              UIComponent.prototype.init.apply(this, arguments);
+
+//             const oData = {
+//                 recipient : {
+//                     name : "World"
+//                 }
+//             };
+
+//             const oModel = new JSONModel(oData);
+//             this.setModel(oModel);          
+
+//             this.getRouter().initialize();
+            
+//         }
+//     });
+// });
+
+//step 35 device adaptation
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "sap/ui/model/json/JSONModel"
-], (UIComponent, JSONModel) => {
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/Device"
+], (UIComponent, JSONModel, Device) => {
     "use strict";
 
     return UIComponent.extend("ui5.walkthrough.Component", {
@@ -63,7 +95,11 @@ sap.ui.define([
             };
 
             const oModel = new JSONModel(oData);
-            this.setModel(oModel);          
+            this.setModel(oModel);        
+            
+            const oDeviceModel = new JSONModel(Device);
+			oDeviceModel.setDefaultBindingMode("OneWay");
+			this.setModel(oDeviceModel, "device");
 
             this.getRouter().initialize();
             
