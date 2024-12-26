@@ -32,6 +32,11 @@ sap.ui.define([
 			} else {
 				console.error("List control not found.");
 			}
+		},
+
+		onPress(){
+			const oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("detail");
 		}
 	});
 });
