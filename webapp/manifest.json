@@ -32,8 +32,8 @@
           "type": "sap.ui.model.resource.ResourceModel",
           "settings": {
             "bundleName": "ui5.walkthrough.i18n.i18n",
-            "supportedLocales": ["", "ko_KR"],
-            "fallbackLocale": "",
+            "supportedLocales": ["", "ko_KR", "en"],
+            "fallbackLocale": "en",
             "async":true
           }          
         }
