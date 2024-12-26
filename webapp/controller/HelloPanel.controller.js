@@ -32,6 +32,10 @@ sap.ui.define([
                 });
             }
             this.oDialog.open();  // 다이얼로그 열기
+        },
+
+        onCloseDialog: function () {
+            this.byId("helloDialog").close();
         }
         
     });
