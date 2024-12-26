@@ -22,6 +22,16 @@ sap.ui.define([
             }).catch(error => {
                 console.error("Error loading i18n bundle:", error);
             });
+        },
+
+        onOpenDialog: async function () {
+           // oDialog가 이미 존재하지 않으면 다이얼로그를 비동기적으로 로드
+            if (!this.oDialog) {
+            this.oDialog = await this.loadFragment({
+                name: "ui5.walkthrough.view.HelloDialog"
+                });
+            }
+            this.oDialog.open();  // 다이얼로그 열기
         }
         
     });
